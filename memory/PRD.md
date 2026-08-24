@@ -11,7 +11,7 @@ User clarification: static Pokéball on load; on click, Pokéball opening animat
 - Design: "Elevated Pokéball" — Swiss Brutalist, obsidian black / white / signal red (#FF3B30), Cabinet Grotesk display + IBM Plex Mono body. Full spec in /app/design_guidelines.json
 
 ## User Personas
-- Portfolio owner (placeholder persona "Alex Carter", creative developer — user will supply real name/details)
+- Portfolio owner: Anjali Tiwari — Senior Data Analyst at AB InBev, targeting product management. Runs 4 projects, leads 2 with a ~12-person team. Details sourced from her resume (ani-2.pdf)
 - Site visitor / recruiter / potential client
 
 ## Core Requirements (static)

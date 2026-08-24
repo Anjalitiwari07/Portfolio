@@ -8,9 +8,8 @@ const EASE = [0.76, 0, 0.24, 1];
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 
 const SOCIALS = [
-  { label: "GitHub", href: "https://github.com" },
-  { label: "LinkedIn", href: "https://linkedin.com" },
-  { label: "Twitter / X", href: "https://x.com" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/anjali-tiwari-722b9a200" },
+  { label: "GitHub", href: "https://github.com/Anjalitiwari07" },
 ];
 
 export default function Contact() {
@@ -67,13 +66,16 @@ export default function Contact() {
               message — I answer every one personally.
             </p>
             <a
-              href="mailto:hello@alexcarter.dev"
+              href="mailto:anjalitiwariwork@gmail.com"
               data-testid="contact-email-link"
-              className="font-display font-bold text-xl md:text-2xl text-white hover:text-[#FF3B30] transition-colors duration-300 inline-flex items-center gap-2 mb-12"
+              className="font-display font-bold text-lg md:text-2xl text-white hover:text-[#FF3B30] transition-colors duration-300 inline-flex items-center gap-2 mb-2 break-all"
             >
-              hello@alexcarter.dev
-              <ArrowUpRight className="w-5 h-5" />
+              anjalitiwariwork@gmail.com
+              <ArrowUpRight className="w-5 h-5 shrink-0" />
             </a>
+            <p className="text-sm text-neutral-500 mb-12">
+              +91 93544 96271 — Delhi, India
+            </p>
             <div className="space-y-4">
               {SOCIALS.map((s) => (
                 <a
@@ -157,7 +159,7 @@ export default function Contact() {
         </div>
 
         <div className="mt-32 pt-8 border-t border-white/10 flex flex-wrap items-center justify-between gap-4 text-xs uppercase tracking-[0.25em] text-neutral-600">
-          <span>© 2026 Alex Carter</span>
+          <span>© 2026 Anjali Tiwari</span>
           <span>Designed &amp; built with obsession</span>
           <a
             href="#top"

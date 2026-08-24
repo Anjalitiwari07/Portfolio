@@ -1,35 +1,35 @@
 import { motion } from "framer-motion";
 import Marquee from "react-fast-marquee";
-import { Code2, Server, Sparkles } from "lucide-react";
+import { Database, Target, Sparkles } from "lucide-react";
 
 const EASE = [0.76, 0, 0.24, 1];
 
 const MARQUEE_ITEMS = [
-  "React",
-  "TypeScript",
-  "Node.js",
-  "Next.js",
-  "Tailwind",
-  "Framer Motion",
-  "Three.js",
-  "PostgreSQL",
+  "SQL",
+  "Python",
+  "Power BI",
+  "Snowflake",
+  "Databricks",
+  "Tableau",
+  "PySpark",
+  "Strategy",
 ];
 
 const COLUMNS = [
   {
-    icon: Code2,
-    title: "Frontend",
-    items: ["React / Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "WebGL / Three.js"],
+    icon: Database,
+    title: "Data",
+    items: ["SQL & Python", "Snowflake & Databricks", "PySpark / Hive", "Power BI & Tableau", "ETL & Automation"],
   },
   {
-    icon: Server,
-    title: "Backend",
-    items: ["Node.js", "FastAPI / Python", "PostgreSQL", "MongoDB", "REST & WebSockets"],
+    icon: Target,
+    title: "Product",
+    items: ["Roadmapping", "Requirement Gathering", "Stakeholder Management", "Prioritization", "Agile Delivery"],
   },
   {
     icon: Sparkles,
-    title: "Craft",
-    items: ["Design Systems", "Motion Design", "Accessibility", "Performance", "CI / CD"],
+    title: "Leadership",
+    items: ["Leading 12-Person Teams", "Mentoring & Coaching", "Strategic Planning", "Decision-Making", "Cross-Functional Collab"],
   },
 ];
 

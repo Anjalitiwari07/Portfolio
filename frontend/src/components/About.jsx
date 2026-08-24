@@ -7,17 +7,17 @@ const CHAPTERS = [
   {
     n: "01",
     title: "Who I Am",
-    text: "A creative developer working at the intersection of design and engineering. I turn rough ideas into sharp, shipped products — fast, accessible, and built to last.",
+    text: "Senior Data Analyst at AB InBev, and a product manager in the making. I currently handle 4 projects and lead 2 of them — a 12-person team shipping the dashboards, pipelines, and automation the business runs on.",
   },
   {
     n: "02",
     title: "What I Do",
-    text: "Full-stack web apps, motion-rich marketing sites, and design systems. From the first wireframe to the final deploy, I own the whole arc of a build.",
+    text: "SQL, Python, Snowflake, and Power BI by day. I've cut dashboard refresh times, automated reporting to save 50+ hours a month, and pushed downtime down 98%. Next up: owning the roadmap.",
   },
   {
     n: "03",
-    title: "Catch 'Em All",
-    text: "Every project is a capture: research it, train it, evolve it, ship it. I collect problems the way trainers collect badges — one hard-won win at a time.",
+    title: "Why Product",
+    text: "Because the best product decisions are data decisions. And I've always called the plays — from captaining my university Kabaddi team to heading the T&P cell and mentoring upcoming coders.",
   },
 ];
 
@@ -58,7 +58,7 @@ export default function About() {
               />
             </div>
             <p className="mt-4 text-xs uppercase tracking-[0.25em] text-neutral-500">
-              Alex Carter — Creative Developer
+              Anjali Tiwari — Data → Product
             </p>
           </motion.div>
         </div>

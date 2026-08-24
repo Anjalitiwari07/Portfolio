@@ -22,7 +22,7 @@ export default function Header({ visible }) {
           data-testid="header-logo"
           className="font-display font-black uppercase tracking-tight text-lg text-white hover:text-[#FF3B30] transition-colors duration-300"
         >
-          AC<span className="text-[#FF3B30]">.</span>
+          AT<span className="text-[#FF3B30]">.</span>
         </a>
         <nav className="hidden md:flex items-center gap-8">
           {LINKS.map((l) => (

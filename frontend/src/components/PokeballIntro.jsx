@@ -35,7 +35,7 @@ export default function PokeballIntro({ onOpen }) {
         transition={{ duration: 1.2, ease: EASE, delay: 0.35 }}
       >
         <span className="absolute top-8 left-8 text-white text-xs uppercase tracking-[0.3em] font-mono">
-          Alex Carter
+          Anjali Tiwari
         </span>
         <span className="absolute top-8 right-8 text-white/70 text-xs uppercase tracking-[0.3em] font-mono">
           Est. 2026
