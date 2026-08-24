@@ -111,7 +111,7 @@ export default function Hero({ start }) {
             Get in Touch
           </a>
           <a
-            href="/Anjali_Tiwari_Resume.pdf"
+            href={`${process.env.PUBLIC_URL}/Anjali_Tiwari_Resume.pdf`}
             download
             data-testid="hero-cta-resume"
             className="flex items-center gap-2 border border-white/25 text-white text-xs uppercase tracking-[0.2em] px-8 py-4 rounded-full hover:border-[#FF3B30] hover:text-[#FF3B30] transition-colors duration-300 active:scale-95"

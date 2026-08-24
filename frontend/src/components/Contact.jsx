@@ -1,11 +1,9 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Loader2 } from "lucide-react";
-import axios from "axios";
+import { ArrowUpRight } from "lucide-react";
 import { toast } from "sonner";
 
 const EASE = [0.76, 0, 0.24, 1];
-const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 
 const SOCIALS = [
   { label: "LinkedIn", href: "https://www.linkedin.com/in/anjali-tiwari-722b9a200" },
@@ -14,22 +12,17 @@ const SOCIALS = [
 
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
-  const [sending, setSending] = useState(false);
 
   const update = (key) => (e) => setForm({ ...form, [key]: e.target.value });
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setSending(true);
-    try {
-      await axios.post(`${API}/contact`, form);
-      toast.success("Message sent — I'll get back to you soon.");
-      setForm({ name: "", email: "", message: "" });
-    } catch {
-      toast.error("Could not send your message. Please try again.");
-    } finally {
-      setSending(false);
-    }
+    const subject = encodeURIComponent(`Portfolio enquiry from ${form.name}`);
+    const body = encodeURIComponent(
+      `${form.message}\n\n— ${form.name} (${form.email})`
+    );
+    window.location.href = `mailto:anjalitiwariwork@gmail.com?subject=${subject}&body=${body}`;
+    toast.success("Opening your email app — your message is pre-filled.");
   };
 
   return (
@@ -151,11 +144,9 @@ export default function Contact() {
             <button
               type="submit"
               data-testid="contact-submit-button"
-              disabled={sending}
-              className="w-full bg-[#FF3B30] text-white text-xs uppercase tracking-[0.25em] py-5 rounded-full hover:bg-white hover:text-[#0A0A0A] transition-colors duration-300 active:scale-95 disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+              className="w-full bg-[#FF3B30] text-white text-xs uppercase tracking-[0.25em] py-5 rounded-full hover:bg-white hover:text-[#0A0A0A] transition-colors duration-300 active:scale-95 flex items-center justify-center gap-2"
             >
-              {sending && <Loader2 className="w-4 h-4 animate-spin" />}
-              {sending ? "Sending..." : "Send Message"}
+              Send Message
             </button>
           </motion.form>
         </div>
