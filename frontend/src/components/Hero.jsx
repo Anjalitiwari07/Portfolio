@@ -71,9 +71,9 @@ export default function Hero({ start }) {
         </div>
 
         <h1 className="font-display font-black uppercase leading-[0.85] tracking-tighter text-[clamp(3.5rem,13vw,12rem)]">
-          <MaskedLine text="Creative" delay={0.25} start={start} className="text-white" />
+          <MaskedLine text="Product" delay={0.25} start={start} className="text-white" />
           <MaskedLine
-            text="Developer"
+            text="Manager"
             delay={0.38}
             start={start}
             className="text-outline"
