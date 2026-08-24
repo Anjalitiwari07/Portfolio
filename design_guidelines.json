@@ -1,0 +1,120 @@
+{
+  "theme_and_art_direction": {
+    "concept": "The Elevated Pokéball - Swiss Brutalism meets Luxury Portfolio",
+    "description": "An Awwwards-worthy, edgy, and highly kinetic portfolio for creative developer 'Alex Carter'. The design abstracts the Pokéball concept into a premium, sophisticated execution. Instead of childish graphics, it uses a strict Swiss-inspired palette of Obsidian Black, Pure White, and Signal Red. The site features bold kinetic typography, masked text reveals, real photography in clipped frames, and purposeful premium motion.",
+    "persona": "Alex Carter - Creative Developer (Edgy, Sophisticated, Technical)",
+    "mode": "Dark Mode Default"
+  },
+  "color_palette": {
+    "background": "#0A0A0A",
+    "surface": "#121212",
+    "surface_glass": "rgba(18, 18, 18, 0.7)",
+    "primary": "#FFFFFF",
+    "accent_red": "#FF3B30",
+    "text_main": "#FFFFFF",
+    "text_muted": "#8A8A8E",
+    "border_subtle": "rgba(255, 255, 255, 0.1)"
+  },
+  "typography": {
+    "strategy": "Swiss Brutalist (Tech / Art)",
+    "fonts": {
+      "headings": "Cabinet Grotesk, Clash Display, or Anton",
+      "body": "IBM Plex Mono or JetBrains Mono",
+      "accents": "Inter (only for small ui labels, not main text)"
+    },
+    "hierarchy": {
+      "h1_hero": "text-5xl sm:text-6xl lg:text-7xl font-black tracking-tighter leading-none uppercase",
+      "h2_section": "text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-none uppercase",
+      "h3_card": "text-xl sm:text-2xl font-bold tracking-tight",
+      "body": "text-base leading-relaxed text-neutral-400 font-mono",
+      "labels": "text-xs uppercase tracking-[0.2em] text-neutral-500 font-mono"
+    }
+  },
+  "intro_animation_spec": {
+    "concept": "Abstracted Pokéball Split-Screen Reveal",
+    "interaction": "Static on load, waiting for a user click. Upon clicking the center, the top half slides up and the bottom half slides down, revealing the kinetic hero section beneath.",
+    "technical_execution": {
+      "wrapper": "fixed inset-0 z-[100] flex flex-col cursor-pointer",
+      "top_half": "h-1/2 w-full bg-[#FF3B30] flex items-end justify-center relative border-b-[4px] border-[#0A0A0A] origin-top",
+      "bottom_half": "h-1/2 w-full bg-[#FFFFFF] flex items-start justify-center relative origin-bottom",
+      "center_button": "absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-[#FFFFFF] rounded-full border-[8px] border-[#0A0A0A] flex items-center justify-center z-[101] shadow-2xl transition-transform hover:scale-110",
+      "center_inner": "w-12 h-12 border-[4px] border-[#0A0A0A] rounded-full",
+      "framer_motion": "Wrap halves in <motion.div>. On click state 'isOpen=true', animate top_half y to '-100%', bottom_half y to '100%', center_button scale to 0 and opacity to 0. Use an easing like [0.76, 0, 0.24, 1] for a premium, heavy cinematic feel."
+    }
+  },
+  "layout_and_sections": {
+    "header": {
+      "style": "Glassmorphism (`backdrop-blur-xl bg-[#0A0A0A]/70`) with subtle bottom border (`border-white/10`). Never fully transparent.",
+      "content": "Minimalist logo (Alex Carter) on left, 3-4 nav links on right, no hamburger menu on desktop."
+    },
+    "hero": {
+      "style": "Kinetic, immersive, dark.",
+      "content": "Massive masked line-by-line text reveal: 'CREATIVE' (line 1), 'DEVELOPER' (line 2). Subtle 3D or parallax abstract background. A refined call-to-action."
+    },
+    "about": {
+      "style": "Numbered manifesto chapters. High typographic contrast.",
+      "content": "Large numbers (01, 02) paired with bold statements. Real photography avatar in a clipped, non-standard frame (e.g., tight vertical rectangle)."
+    },
+    "skills": {
+      "style": "Editorial Marquee.",
+      "content": "Massive outline text (`text-8xl+ text-transparent font-black stroke-white`) scrolling very slowly using `react-fast-marquee`. Mixed with subtle tech icons."
+    },
+    "projects": {
+      "style": "The 'Tetris' Grid (Asymmetric Bento).",
+      "content": "4 realistic sample projects. Mix wide and tall cards. Images use `bg-black/40` overlay to ensure text contrast. Use hover effects that slightly scale the image and reveal project details."
+    },
+    "contact": {
+      "style": "Massive, bold footer.",
+      "content": "Huge text 'LET'S TALK' at `text-[10vw]`. Red accent button. Darker background tone than the rest of the site (e.g., solid `#000000`)."
+    }
+  },
+  "motion_and_interaction": {
+    "scroll": "MANDATORY: Use `lenis` for smooth momentum scrolling. It gives the site weight and premium feel.",
+    "reveals": "Use `framer-motion` for scroll-triggered reveals (`whileInView`). Do not animate everything; focus on text masks and staggered list items.",
+    "hover_states": "All interactive elements MUST explicitly set text color on hover. Use scale transitions (`active:scale-95`)."
+  },
+  "media": {
+    "image_urls": {
+      "avatar": {
+        "url": "https://images.pexels.com/photos/19923619/pexels-photo-19923619.jpeg",
+        "description": "Artistic silhouette of a woman. Use in the About section."
+      },
+      "project_1": {
+        "url": "https://images.pexels.com/photos/7505924/pexels-photo-7505924.jpeg",
+        "description": "Dark rippling water textures. Project 1 thumbnail."
+      },
+      "project_2": {
+        "url": "https://images.pexels.com/photos/36013333/pexels-photo-36013333.png",
+        "description": "Monochrome abstract layered lines. Project 2 thumbnail."
+      },
+      "project_3": {
+        "url": "https://images.pexels.com/photos/15315573/pexels-photo-15315573.jpeg",
+        "description": "Red and black marbled pattern. Project 3 thumbnail."
+      },
+      "project_4": {
+        "url": "https://images.pexels.com/photos/1340377/pexels-photo-1340377.jpeg",
+        "description": "Vivid red square on black. Project 4 thumbnail."
+      }
+    }
+  },
+  "components_and_libraries": {
+    "ui_primitives": "Custom HTML/Tailwind for marketing layout. Avoid Shadcn for main structure to maintain creative freedom.",
+    "icons": "lucide-react (already installed)",
+    "motion": "framer-motion (required for intro and kinetic text)",
+    "scrolling": "@studio-freight/react-lenis (required for momentum scroll)",
+    "marquee": "react-fast-marquee"
+  },
+  "accessibility": {
+    "contrast": "Ensure pure white text on obsidian black meets WCAG AAA. Ensure text over images has a gradient overlay or text-shadow.",
+    "testing": "All buttons, links, and forms MUST include a `data-testid` attribute (e.g., `data-testid=\"pokeball-intro-button\"`).",
+    "reduced_motion": "Respect `prefers-reduced-motion` for heavy animations."
+  },
+  "universal_guidelines": [
+    "No generic centered layouts. Use asymmetry and grids.",
+    "Do not apply `transition: all`. Target specific properties.",
+    "Never use purely transparent headers over content.",
+    "Never use placeholder URLs. Use the provided Pexels links.",
+    "Focus heavily on deep, rich layering (z-index hierarchy) and glassmorphism with inner borders.",
+    "Create `.js` or `.jsx` components, not TypeScript (`.tsx`)."
+  ]
+}
