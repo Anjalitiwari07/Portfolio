@@ -8,10 +8,10 @@ const MARQUEE_ITEMS = [
   "SQL",
   "Python",
   "Power BI",
-  "Snowflake",
   "Databricks",
-  "Tableau",
-  "PySpark",
+  "Celonis",
+  "Snowflake",
+  "Governance",
   "Strategy",
 ];
 
@@ -19,17 +19,17 @@ const COLUMNS = [
   {
     icon: Database,
     title: "Data",
-    items: ["SQL & Python", "Snowflake & Databricks", "PySpark / Hive", "Power BI & Tableau", "ETL & Automation"],
+    items: ["SQL & Python", "Databricks & Snowflake", "Celonis / Process Mining", "Power BI & Tableau", "Data Governance & KPIs"],
   },
   {
     icon: Target,
     title: "Product",
-    items: ["Roadmapping", "Requirement Gathering", "Stakeholder Management", "Prioritization", "Agile Delivery"],
+    items: ["Roadmapping", "Requirement Gathering", "Stakeholder Alignment", "Prioritization", "UX Strategy"],
   },
   {
     icon: Sparkles,
     title: "Leadership",
-    items: ["Leading 12-Person Teams", "Mentoring & Coaching", "Strategic Planning", "Decision-Making", "Cross-Functional Collab"],
+    items: ["Leading 90+ Member Initiatives", "Cross-Functional Delivery", "Standards & Reusable Patterns", "Multi-Workstream Management", "Mentoring & Coaching"],
   },
 ];
 

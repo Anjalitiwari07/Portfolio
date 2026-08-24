@@ -7,17 +7,17 @@ const CHAPTERS = [
   {
     n: "01",
     title: "Who I Am",
-    text: "Senior Data Analyst at AB InBev, working toward product management. I currently handle four projects and lead two of them — guiding a 12-person team that builds the dashboards, pipelines, and automation the business depends on.",
+    text: "Enterprise Data Transformation Lead at AB InBev, working toward product management. I lead the migration of Celonis process intelligence to Databricks and drive UI/UX standardization across a 90+ member, multi-project team.",
   },
   {
     n: "02",
     title: "What I Do",
-    text: "I turn complex data into clear decisions. I've cut dashboard refresh times, automated reporting to save 50+ hours every month, and reduced system downtime by 98% — measurable outcomes, not just output.",
+    text: "I own FORT reconciliation and global data KPIs — consistency, accuracy, governance — while aligning data, engineering, product, and business teams on one delivery. Before this: 50+ hours saved monthly through automation and a 98% cut in downtime.",
   },
   {
     n: "03",
     title: "Where I'm Headed",
-    text: "Product management. At American Express I gathered requirements directly with stakeholders; at AB InBev I lead teams and deliver under real deadlines. I bring an analyst's rigor and a captain's judgment to every call.",
+    text: "Product management. I already balance migration, reconciliation, KPI standardization, and UX transformation across workstreams — and I build reusable standards that make every next project faster. That's product thinking, applied daily.",
   },
 ];
 

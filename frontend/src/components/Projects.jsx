@@ -3,39 +3,50 @@ import { ArrowUpRight } from "lucide-react";
 
 const EASE = [0.76, 0, 0.24, 1];
 
+const STATS = [
+  { value: "50+", label: "Hours saved every month through automation" },
+  { value: "98%", label: "Reduction in reporting downtime" },
+  { value: "90+", label: "Team members on one UX standard" },
+  { value: "40%", label: "Efficiency lift delivered at Amex" },
+];
+
 const PROJECTS = [
   {
     n: "01",
-    title: "Reporting Automation",
-    desc: "Automated reporting workflows at AB InBev — 50+ work hours saved every single month.",
-    tags: ["Python", "SQL", "Power Apps"],
+    title: "Celonis → Databricks Migration",
+    desc: "Leading the enterprise migration of process intelligence and analytics to a scalable, centralized Databricks architecture.",
+    impact: "One centralized architecture for enterprise process intelligence",
+    tags: ["Databricks", "Celonis", "Data Architecture"],
     img: "https://images.pexels.com/photos/7505924/pexels-photo-7505924.jpeg",
     span: "md:col-span-7",
     height: "h-[420px] md:h-[520px]",
   },
   {
     n: "02",
-    title: "Volumetric Flash BI",
-    desc: "Power BI dashboards for BU Central turning global beer sales data into daily decisions.",
-    tags: ["Power BI", "SAP", "Anaplan"],
+    title: "Enterprise UX Standardization",
+    desc: "Design principles and reusable UI patterns driving consistent experiences across a 90+ member, multi-project team.",
+    impact: "90+ member team shipping on one design language",
+    tags: ["UI/UX Strategy", "Design Systems", "Leadership"],
     img: "https://images.pexels.com/photos/36013333/pexels-photo-36013333.png",
     span: "md:col-span-5",
     height: "h-[420px] md:h-[520px]",
   },
   {
     n: "03",
-    title: "Risk Automation — Amex",
-    desc: "Automation features for American Express Global Risk & Compliance, lifting team efficiency 40%.",
-    tags: ["Python", "Hadoop", "Hive"],
+    title: "Global KPI Governance",
+    desc: "Owning FORT reconciliation and global data KPIs — accuracy, consistency, and reporting the business trusts.",
+    impact: "Trusted KPI reporting across multiple business processes",
+    tags: ["SQL", "Power BI", "Governance"],
     img: "https://images.pexels.com/photos/15315573/pexels-photo-15315573.jpeg",
     span: "md:col-span-5",
     height: "h-[420px] md:h-[520px]",
   },
   {
     n: "04",
-    title: "Digital Lending Platform",
-    desc: "Top 10 of 3500+ teams at the Amex Makeathon — fast loans for MSMEs, frontend led by me.",
-    tags: ["Node.js", "ML", "Firebase"],
+    title: "Risk Automation — Amex",
+    desc: "Automation features for American Express Global Risk & Compliance, lifting team efficiency 40%.",
+    impact: "+40% team efficiency at American Express",
+    tags: ["Python", "Hadoop", "Hive"],
     img: "https://images.pexels.com/photos/1340377/pexels-photo-1340377.jpeg",
     span: "md:col-span-7",
     height: "h-[420px] md:h-[520px]",
@@ -62,6 +73,29 @@ export default function Projects() {
           <p className="text-xs uppercase tracking-[0.25em] text-neutral-500">
             04 Highlights — 2022 / Present
           </p>
+        </div>
+
+        <div
+          data-testid="impact-stats"
+          className="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/10 border border-white/10 mb-16"
+        >
+          {STATS.map((s, i) => (
+            <motion.div
+              key={s.label}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.7, ease: EASE, delay: i * 0.08 }}
+              className="bg-[#0A0A0A] p-6 md:p-8"
+            >
+              <div className="font-display font-black text-4xl md:text-5xl text-[#FF3B30] leading-none mb-3">
+                {s.value}
+              </div>
+              <p className="text-xs uppercase tracking-[0.2em] text-neutral-400">
+                {s.label}
+              </p>
+            </motion.div>
+          ))}
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
@@ -93,6 +127,9 @@ export default function Projects() {
                 <h3 className="font-display font-bold tracking-tight text-xl sm:text-2xl uppercase text-white mb-2 group-hover:text-[#FF3B30] transition-colors duration-300">
                   {p.title}
                 </h3>
+                <p className="text-sm font-semibold text-[#FF3B30] mb-3">
+                  {p.impact}
+                </p>
                 <p className="text-sm text-neutral-300 max-w-md mb-4 opacity-80">
                   {p.desc}
                 </p>

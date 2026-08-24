@@ -90,9 +90,10 @@ export default function Hero({ start }) {
             transition={{ duration: 0.9, ease: EASE, delay: 0.55 }}
             className="text-sm md:text-base leading-relaxed text-neutral-400"
           >
-            I&apos;m Anjali Tiwari — Senior Data Analyst at AB InBev, moving into
-            product management. I run four projects and lead two teams of
-            twelve, turning complex data into decisions the business acts on.
+            I&apos;m Anjali Tiwari — Enterprise Data Transformation Lead at AB
+            InBev, moving into product management. I&apos;m leading our
+            Celonis-to-Databricks migration and driving UI/UX standardization
+            across a 90+ member team.
           </motion.p>
         </div>
 
