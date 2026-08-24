@@ -75,6 +75,7 @@ export default function Skills() {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
+            whileHover={{ y: -6 }}
             transition={{ duration: 0.8, ease: EASE, delay: i * 0.12 }}
             className="bg-[#0A0A0A] p-8 md:p-10 group hover:bg-[#121212] transition-colors duration-500"
           >

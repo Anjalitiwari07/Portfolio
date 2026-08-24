@@ -145,3 +145,33 @@ html {
 .light.text-white {
   color: #111112;
 }
+
+@media (pointer: fine) {
+  body,
+  body * {
+    cursor: none !important;
+  }
+}
+
+@keyframes glow-drift {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-6%, 8%) scale(1.15);
+  }
+}
+.glow-drift {
+  animation: glow-drift 14s ease-in-out infinite;
+}
+
+.text-outline {
+  transition: color 0.5s ease;
+}
+.text-outline-hover:hover {
+  color: rgba(255, 255, 255, 0.92);
+}
+.light .text-outline-hover:hover {
+  color: #111112;
+}

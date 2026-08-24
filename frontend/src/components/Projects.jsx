@@ -110,10 +110,14 @@ export default function Projects() {
               transition={{ duration: 0.9, ease: EASE, delay: (i % 2) * 0.12 }}
               className={`group relative overflow-hidden border border-white/10 ${p.span} ${p.height} block`}
             >
-              <img
+              <motion.img
                 src={p.img}
                 alt={p.title}
                 loading="lazy"
+                initial={{ clipPath: "inset(100% 0 0 0)" }}
+                whileInView={{ clipPath: "inset(0% 0 0 0)" }}
+                viewport={{ once: true, margin: "-80px" }}
+                transition={{ duration: 1.1, ease: EASE, delay: 0.15 }}
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10" />

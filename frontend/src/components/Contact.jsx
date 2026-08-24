@@ -38,7 +38,7 @@ export default function Contact() {
       data-testid="contact-section"
       className="relative bg-black border-t border-white/10 pt-32 md:pt-44 pb-10 px-6 md:px-10 overflow-hidden"
     >
-      <div className="absolute -bottom-40 -left-40 w-[50vw] h-[50vw] rounded-full bg-[#FF3B30]/10 blur-[140px] pointer-events-none" />
+      <div className="glow-drift absolute -bottom-40 -left-40 w-[50vw] h-[50vw] rounded-full bg-[#FF3B30]/10 blur-[140px] pointer-events-none" />
 
       <div className="max-w-[1600px] mx-auto relative z-10">
         <p className="text-xs uppercase tracking-[0.3em] text-neutral-500 mb-8">

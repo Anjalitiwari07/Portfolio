@@ -3,6 +3,8 @@ import "@/App.css";
 import Lenis from "lenis";
 import { AnimatePresence } from "framer-motion";
 import { Toaster } from "@/components/ui/sonner";
+import Cursor from "@/components/Cursor";
+import ScrollProgress from "@/components/ScrollProgress";
 import PokeballIntro from "@/components/PokeballIntro";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
@@ -66,6 +68,8 @@ function App() {
         <Contact />
       </main>
       <Toaster position="bottom-right" theme="dark" />
+      <Cursor />
+      <ScrollProgress />
     </div>
   );
 }

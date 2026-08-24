@@ -36,7 +36,7 @@ export default function Hero({ start }) {
       className="relative min-h-screen flex flex-col justify-center overflow-hidden px-6 md:px-10 pt-16"
     >
       {/* ambient red glow */}
-      <div className="absolute -top-40 -right-40 w-[60vw] h-[60vw] rounded-full bg-[#FF3B30]/10 blur-[140px] pointer-events-none" />
+      <div className="glow-drift absolute -top-40 -right-40 w-[60vw] h-[60vw] rounded-full bg-[#FF3B30]/10 blur-[140px] pointer-events-none" />
 
       {/* faint vertical grid backdrop */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
@@ -72,7 +72,7 @@ export default function Hero({ start }) {
             text="Manager"
             delay={0.38}
             start={start}
-            className="text-outline"
+            className="text-outline text-outline-hover"
           />
         </h1>
 
