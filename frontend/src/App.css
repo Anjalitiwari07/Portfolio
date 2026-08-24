@@ -34,3 +34,114 @@ html {
     display: none;
   }
 }
+
+/* Light theme overrides */
+.light .bg-\[\#0A0A0A\] {
+  background-color: #f7f6f3;
+}
+.light .bg-\[\#121212\] {
+  background-color: #ffffff;
+}
+.light .bg-black {
+  background-color: #edece7;
+}
+.light .text-white {
+  color: #111112;
+}
+.light .text-neutral-300 {
+  color: #3f3f46;
+}
+.light .text-neutral-400 {
+  color: #52525b;
+}
+.light .text-neutral-500 {
+  color: #6b6b72;
+}
+.light .text-neutral-600 {
+  color: #8e8e93;
+}
+.light .border-white\/5 {
+  border-color: rgba(0, 0, 0, 0.06);
+}
+.light .border-white\/10 {
+  border-color: rgba(0, 0, 0, 0.1);
+}
+.light .border-white\/15 {
+  border-color: rgba(0, 0, 0, 0.15);
+}
+.light .border-white\/20 {
+  border-color: rgba(0, 0, 0, 0.2);
+}
+.light .border-white\/25 {
+  border-color: rgba(0, 0, 0, 0.25);
+}
+.light .border-white\/30 {
+  border-color: rgba(0, 0, 0, 0.3);
+}
+.light .bg-white\/5 {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+.light .bg-white\/10 {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+.light .bg-\[\#0A0A0A\]\/70 {
+  background-color: rgba(247, 246, 243, 0.78);
+}
+.light .text-outline {
+  -webkit-text-stroke-color: rgba(10, 10, 10, 0.4);
+}
+.light .border-\[\#0A0A0A\] {
+  border-color: #f7f6f3;
+}
+.light .hover\:bg-white:hover {
+  background-color: #111112;
+}
+.light .hover\:text-\[\#0A0A0A\]:hover {
+  color: #ffffff;
+}
+.light .hover\:text-white:hover {
+  color: #111112;
+}
+.light .hover\:bg-white\/5:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.light .hover\:bg-\[\#FF3B30\]:hover {
+  background-color: #ff3b30;
+  color: #ffffff;
+}
+.light .hover\:border-white:hover {
+  border-color: rgba(0, 0, 0, 0.4);
+}
+.light .placeholder\:text-neutral-600::placeholder {
+  color: #a1a1aa;
+}
+.light .bg-\[\#FF3B30\] {
+  color: #ffffff;
+}
+.light a.group .text-white {
+  color: #ffffff;
+}
+.light a.group .text-neutral-300 {
+  color: #d4d4d8;
+}
+.light .group:hover .group-hover\:text-white {
+  color: #111112;
+}
+.light .group:hover .group-hover\:text-neutral-200 {
+  color: #3f3f46;
+}
+.light [data-testid="pokeball-intro"] .text-white {
+  color: #ffffff;
+}
+.light [data-testid="pokeball-intro"] .text-white\/70 {
+  color: rgba(255, 255, 255, 0.7);
+}
+.light.grain::after {
+  opacity: 0.03;
+}
+.light.bg-\[\#0A0A0A\] {
+  background-color: #f7f6f3;
+}
+.light.text-white {
+  color: #111112;
+}

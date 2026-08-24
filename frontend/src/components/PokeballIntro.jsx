@@ -30,27 +30,58 @@ export default function PokeballIntro({ onOpen }) {
 
       {/* top half */}
       <motion.div
-        className="relative h-1/2 w-full bg-[#FF3B30] border-b-[8px] border-[#0A0A0A]"
+        className="relative h-1/2 w-full bg-[#FF3B30] border-b-[8px] border-[#0A0A0A] overflow-hidden"
         animate={opening ? { y: "-100%" } : { y: 0 }}
         transition={{ duration: 1.2, ease: EASE, delay: 0.35 }}
       >
-        <span className="absolute top-8 left-8 text-white text-xs uppercase tracking-[0.3em] font-mono">
+        <motion.span
+          aria-hidden="true"
+          className="absolute left-0 right-0 bottom-[-0.22em] text-center font-display font-black uppercase leading-none text-[24vw] md:text-[19vw] text-white/25 pointer-events-none whitespace-nowrap"
+          initial={{ y: 80, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1, ease: EASE, delay: 0.2 }}
+        >
+          Anjali
+        </motion.span>
+        <span className="absolute top-8 left-8 text-white text-xs uppercase tracking-[0.3em] font-mono z-10">
           Anjali Tiwari
         </span>
-        <span className="absolute top-8 right-8 text-white/70 text-xs uppercase tracking-[0.3em] font-mono">
+        <span className="absolute top-8 right-8 text-white/70 text-xs uppercase tracking-[0.3em] font-mono z-10">
           Est. 2026
         </span>
+        <span aria-hidden="true" className="absolute top-1/4 left-[12%] text-white/60 text-xl font-mono">+</span>
+        <span aria-hidden="true" className="absolute top-[15%] right-[18%] text-white/60 text-xl font-mono">+</span>
       </motion.div>
 
       {/* bottom half */}
       <motion.div
-        className="relative h-1/2 w-full bg-white border-t-[8px] border-[#0A0A0A]"
+        className="relative h-1/2 w-full bg-white border-t-[8px] border-[#0A0A0A] overflow-hidden"
         animate={opening ? { y: "100%" } : { y: 0 }}
         transition={{ duration: 1.2, ease: EASE, delay: 0.35 }}
       >
-        <span className="absolute bottom-8 right-8 text-[#0A0A0A] text-xs uppercase tracking-[0.3em] font-mono">
+        <motion.span
+          aria-hidden="true"
+          className="absolute left-0 right-0 top-[-0.22em] text-center font-display font-black uppercase leading-none text-[24vw] md:text-[19vw] text-[#0A0A0A]/10 pointer-events-none whitespace-nowrap"
+          initial={{ y: -80, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1, ease: EASE, delay: 0.2 }}
+        >
+          Tiwari
+        </motion.span>
+        <motion.div
+          className="absolute bottom-8 left-8 text-[#0A0A0A] text-[10px] md:text-xs uppercase tracking-[0.3em] font-mono leading-relaxed z-10"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.8, duration: 0.8 }}
+        >
+          Nº 001 — Opening Night
+          <br />
+          <span className="text-[#0A0A0A]/50">Mixed media on screen, 2026</span>
+        </motion.div>
+        <span className="absolute bottom-8 right-8 text-[#0A0A0A] text-xs uppercase tracking-[0.3em] font-mono z-10">
           Portfolio — V.1
         </span>
+        <span aria-hidden="true" className="absolute bottom-1/4 right-[14%] text-[#0A0A0A]/40 text-xl font-mono">+</span>
       </motion.div>
 
       {/* center button */}
@@ -76,14 +107,38 @@ export default function PokeballIntro({ onOpen }) {
         </motion.button>
       </div>
 
-      {/* hint */}
-      <motion.p
-        className="absolute left-1/2 top-[calc(50%+6rem)] -translate-x-1/2 z-[101] text-[#0A0A0A] text-xs uppercase tracking-[0.35em] font-mono whitespace-nowrap"
-        animate={opening ? { opacity: 0 } : { opacity: [0.4, 1, 0.4] }}
-        transition={opening ? { duration: 0.2 } : { duration: 2, repeat: Infinity }}
-      >
-        Click to open
-      </motion.p>
+      {/* rotating ring text */}
+      {!opening && (
+        <motion.svg
+          viewBox="0 0 200 200"
+          aria-hidden="true"
+          className="absolute left-1/2 top-1/2 w-64 h-64 md:w-80 md:h-80 z-[100] pointer-events-none"
+          initial={{ opacity: 0, x: "-50%", y: "-50%" }}
+          animate={{ opacity: 1, x: "-50%", y: "-50%", rotate: 360 }}
+          transition={{
+            opacity: { delay: 0.6, duration: 0.8 },
+            rotate: { duration: 26, repeat: Infinity, ease: "linear" },
+          }}
+        >
+          <defs>
+            <path
+              id="introRingPath"
+              d="M 100,100 m -80,0 a 80,80 0 1,1 160,0 a 80,80 0 1,1 -160,0"
+              fill="none"
+            />
+          </defs>
+          <text
+            fill="#0A0A0A"
+            fontSize="11.5"
+            letterSpacing="3"
+            style={{ fontFamily: "'IBM Plex Mono', monospace", textTransform: "uppercase" }}
+          >
+            <textPath href="#introRingPath">
+              Click to open · Anjali Tiwari · Portfolio 2026 ·
+            </textPath>
+          </text>
+        </motion.svg>
+      )}
     </motion.div>
   );
 }

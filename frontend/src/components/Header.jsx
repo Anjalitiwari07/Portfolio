@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Sun, Moon } from "lucide-react";
 
 const LINKS = [
   { label: "About", href: "#about" },
@@ -8,7 +9,7 @@ const LINKS = [
   { label: "Contact", href: "#contact" },
 ];
 
-export default function Header({ visible }) {
+export default function Header({ visible, theme, onToggleTheme }) {
   return (
     <motion.header
       data-testid="site-header"
@@ -37,13 +38,27 @@ export default function Header({ visible }) {
             </a>
           ))}
         </nav>
-        <a
-          href="#contact"
-          data-testid="header-cta"
-          className="text-xs uppercase tracking-[0.2em] border border-white/20 px-4 py-2 rounded-full text-white hover:bg-[#FF3B30] hover:border-[#FF3B30] hover:text-white transition-colors duration-300 active:scale-95"
-        >
-          Let&apos;s Talk
-        </a>
+        <div className="flex items-center gap-3">
+          <button
+            data-testid="theme-toggle"
+            onClick={onToggleTheme}
+            aria-label="Toggle light and dark theme"
+            className="w-9 h-9 flex items-center justify-center rounded-full border border-white/20 text-white hover:text-[#FF3B30] hover:border-[#FF3B30] transition-colors duration-300 active:scale-95"
+          >
+            {theme === "dark" ? (
+              <Sun className="w-4 h-4" />
+            ) : (
+              <Moon className="w-4 h-4" />
+            )}
+          </button>
+          <a
+            href="#contact"
+            data-testid="header-cta"
+            className="text-xs uppercase tracking-[0.2em] border border-white/20 px-4 py-2 rounded-full text-white hover:bg-[#FF3B30] hover:border-[#FF3B30] hover:text-white transition-colors duration-300 active:scale-95"
+          >
+            Let&apos;s Talk
+          </a>
+        </div>
       </div>
     </motion.header>
   );

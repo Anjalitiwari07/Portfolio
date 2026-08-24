@@ -14,6 +14,7 @@ import Contact from "@/components/Contact";
 
 function App() {
   const [opened, setOpened] = useState(false);
+  const [theme, setTheme] = useState("dark");
   const lenisRef = useRef(null);
 
   useEffect(() => {
@@ -43,11 +44,19 @@ function App() {
   }, [opened]);
 
   return (
-    <div className="grain bg-[#0A0A0A] text-white min-h-screen font-mono antialiased selection:bg-[#FF3B30] selection:text-white">
+    <div
+      className={`grain bg-[#0A0A0A] text-white min-h-screen font-mono antialiased selection:bg-[#FF3B30] selection:text-white ${
+        theme === "light" ? "light" : ""
+      }`}
+    >
       <AnimatePresence>
         {!opened && <PokeballIntro key="intro" onOpen={() => setOpened(true)} />}
       </AnimatePresence>
-      <Header visible={opened} />
+      <Header
+        visible={opened}
+        theme={theme}
+        onToggleTheme={() => setTheme(theme === "dark" ? "light" : "dark")}
+      />
       <main>
         <Hero start={opened} />
         <About />
