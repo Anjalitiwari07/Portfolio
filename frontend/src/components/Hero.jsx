@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, Download } from "lucide-react";
 
 const EASE = [0.76, 0, 0.24, 1];
 
@@ -25,7 +25,6 @@ export default function Hero({ start }) {
     target: ref,
     offset: ["start start", "end start"],
   });
-  const yRing = useTransform(scrollYProgress, [0, 1], [0, -180]);
   const yText = useTransform(scrollYProgress, [0, 1], [0, 120]);
   const fade = useTransform(scrollYProgress, [0, 0.75], [1, 0]);
 
@@ -39,20 +38,14 @@ export default function Hero({ start }) {
       {/* ambient red glow */}
       <div className="absolute -top-40 -right-40 w-[60vw] h-[60vw] rounded-full bg-[#FF3B30]/10 blur-[140px] pointer-events-none" />
 
-      {/* parallax pokeball ring */}
-      <motion.div
-        style={{ y: yRing }}
-        className="absolute right-[-10vw] md:right-[4vw] top-1/2 -translate-y-1/2 pointer-events-none"
-        aria-hidden="true"
-      >
-        <div className="relative w-[70vw] md:w-[42vw] aspect-square rounded-full border border-white/10">
-          <div className="absolute inset-0 rounded-full overflow-hidden">
-            <div className="absolute top-0 left-0 right-0 h-1/2 bg-[#FF3B30]/15" />
-            <div className="absolute top-1/2 left-0 right-0 h-[2px] bg-white/20 -translate-y-1/2" />
-          </div>
-          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[18%] aspect-square rounded-full border border-white/25 bg-[#0A0A0A]" />
+      {/* faint vertical grid backdrop */}
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+        <div className="max-w-[1600px] mx-auto h-full grid grid-cols-4">
+          {[...Array(4)].map((_, i) => (
+            <div key={i} className="border-l border-white/5 last:border-r" />
+          ))}
         </div>
-      </motion.div>
+      </div>
 
       <motion.div style={{ y: yText, opacity: fade }} className="relative z-10 max-w-[1600px] mx-auto w-full">
         <div className="overflow-hidden mb-8">
@@ -116,6 +109,15 @@ export default function Hero({ start }) {
             className="border border-white/25 text-white text-xs uppercase tracking-[0.2em] px-8 py-4 rounded-full hover:border-white hover:bg-white/5 transition-colors duration-300 active:scale-95"
           >
             Get in Touch
+          </a>
+          <a
+            href="/Anjali_Tiwari_Resume.pdf"
+            download
+            data-testid="hero-cta-resume"
+            className="flex items-center gap-2 border border-white/25 text-white text-xs uppercase tracking-[0.2em] px-8 py-4 rounded-full hover:border-[#FF3B30] hover:text-[#FF3B30] transition-colors duration-300 active:scale-95"
+          >
+            <Download className="w-4 h-4" />
+            Download CV
           </a>
         </motion.div>
       </motion.div>
