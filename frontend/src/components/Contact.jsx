@@ -42,7 +42,7 @@ export default function Contact() {
 
       <div className="max-w-[1600px] mx-auto relative z-10">
         <p className="text-xs uppercase tracking-[0.3em] text-neutral-500 mb-8">
-          Contact — Final Battle
+          Contact — Get In Touch
         </p>
         <motion.h2
           initial={{ opacity: 0, y: 60 }}
@@ -62,8 +62,10 @@ export default function Contact() {
             transition={{ duration: 0.8, ease: EASE }}
           >
             <p className="text-sm md:text-base leading-relaxed text-neutral-400 max-w-md mb-10">
-              Have a project worth catching? A role worth battling for? Send a
-              message — I answer every one personally.
+              I&apos;m exploring product management and senior data roles. If
+              you&apos;re building something data-driven — or hiring someone who
+              turns insight into impact — I&apos;d genuinely love to hear from
+              you.
             </p>
             <a
               href="mailto:anjalitiwariwork@gmail.com"
@@ -112,7 +114,7 @@ export default function Contact() {
                 required
                 value={form.name}
                 onChange={update("name")}
-                placeholder="Ash Ketchum"
+                placeholder="Your name"
                 className="w-full bg-white/5 border border-white/10 px-5 py-4 text-sm text-white placeholder:text-neutral-600 focus:outline-none focus:border-[#FF3B30] transition-colors duration-300"
               />
             </div>
@@ -127,7 +129,7 @@ export default function Contact() {
                 required
                 value={form.email}
                 onChange={update("email")}
-                placeholder="ash@pallet.town"
+                placeholder="you@company.com"
                 className="w-full bg-white/5 border border-white/10 px-5 py-4 text-sm text-white placeholder:text-neutral-600 focus:outline-none focus:border-[#FF3B30] transition-colors duration-300"
               />
             </div>
@@ -142,7 +144,7 @@ export default function Contact() {
                 rows={5}
                 value={form.message}
                 onChange={update("message")}
-                placeholder="Tell me about your project..."
+                placeholder="Tell me about the role or project..."
                 className="w-full bg-white/5 border border-white/10 px-5 py-4 text-sm text-white placeholder:text-neutral-600 focus:outline-none focus:border-[#FF3B30] transition-colors duration-300 resize-none"
               />
             </div>

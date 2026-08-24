@@ -42,10 +42,10 @@ export default function Skills() {
     >
       <div className="px-6 md:px-10 max-w-[1600px] mx-auto mb-16">
         <p className="text-xs uppercase tracking-[0.3em] text-neutral-500 mb-6">
-          Skills — The Party
+          Skills &amp; Expertise
         </p>
         <h2 className="font-display font-bold uppercase tracking-tight leading-none text-3xl sm:text-4xl lg:text-5xl">
-          The full <span className="text-[#FF3B30]">loadout.</span>
+          Core <span className="text-[#FF3B30]">capabilities.</span>
         </h2>
       </div>
 

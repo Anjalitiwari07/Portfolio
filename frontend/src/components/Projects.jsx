@@ -53,14 +53,14 @@ export default function Projects() {
         <div className="flex flex-wrap items-end justify-between gap-6 mb-16">
           <div>
             <p className="text-xs uppercase tracking-[0.3em] text-neutral-500 mb-6">
-              Selected Work — The Pokédex
+              Selected Work
             </p>
             <h2 className="font-display font-bold uppercase tracking-tight leading-none text-3xl sm:text-4xl lg:text-5xl">
-              Caught &amp; <span className="text-[#FF3B30]">shipped.</span>
+              Work that <span className="text-[#FF3B30]">delivered.</span>
             </h2>
           </div>
           <p className="text-xs uppercase tracking-[0.25em] text-neutral-500">
-            04 Projects — 2024 / 2026
+            04 Highlights — 2022 / Present
           </p>
         </div>
 

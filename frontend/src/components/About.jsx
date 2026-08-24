@@ -7,17 +7,17 @@ const CHAPTERS = [
   {
     n: "01",
     title: "Who I Am",
-    text: "Senior Data Analyst at AB InBev, and a product manager in the making. I currently handle 4 projects and lead 2 of them — a 12-person team shipping the dashboards, pipelines, and automation the business runs on.",
+    text: "Senior Data Analyst at AB InBev, working toward product management. I currently handle four projects and lead two of them — guiding a 12-person team that builds the dashboards, pipelines, and automation the business depends on.",
   },
   {
     n: "02",
     title: "What I Do",
-    text: "SQL, Python, Snowflake, and Power BI by day. I've cut dashboard refresh times, automated reporting to save 50+ hours a month, and pushed downtime down 98%. Next up: owning the roadmap.",
+    text: "I turn complex data into clear decisions. I've cut dashboard refresh times, automated reporting to save 50+ hours every month, and reduced system downtime by 98% — measurable outcomes, not just output.",
   },
   {
     n: "03",
-    title: "Why Product",
-    text: "Because the best product decisions are data decisions. And I've always called the plays — from captaining my university Kabaddi team to heading the T&P cell and mentoring upcoming coders.",
+    title: "Where I'm Headed",
+    text: "Product management. At American Express I gathered requirements directly with stakeholders; at AB InBev I lead teams and deliver under real deadlines. I bring an analyst's rigor and a captain's judgment to every call.",
   },
 ];
 
@@ -66,10 +66,10 @@ export default function About() {
         {/* manifesto chapters */}
         <div className="lg:col-span-8">
           <p className="text-xs uppercase tracking-[0.3em] text-neutral-500 mb-6">
-            About — The Manifesto
+            About Me
           </p>
           <h2 className="font-display font-bold uppercase tracking-tight leading-none text-3xl sm:text-4xl lg:text-5xl mb-16">
-            Trained to <span className="text-[#FF3B30]">ship.</span>
+            From data to <span className="text-[#FF3B30]">decisions.</span>
           </h2>
           <div className="space-y-0">
             {CHAPTERS.map((c, i) => (
